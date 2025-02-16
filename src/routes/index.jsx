@@ -4,11 +4,16 @@ import {
     Route,
     RouterProvider,
 } from "react-router-dom";
-import { Moduels } from "../pages/moduels";
+import { Modules } from "../pages/modules";
+import { Home } from "../pages/home";
 
-const router = createBrowserRouter(
+const Mainrouter = createBrowserRouter(
     createRoutesFromElements(
-        <Route path="/modules" element={<Moduels />}></Route>
+        <>
+            <Route path="/modules" element={<Modules />} />
+            <Route path="/" element={<Home />} />
+        </>
     )
 );
 
+export default Mainrouter;
